@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<form [formGroup]="myForm">
+  <h4>TO</h4>
+  <input type="text" formControlName="to" name="to" [(ngModel)]="myForm.to">
+  <h4>TITLE</h4>
+  <input type="text" formControlName="title" name="title" [(ngModel)]="myForm.title">
+  <h4>MESSAGE</h4>
+  <input type="text" formControlName="message" name="message" [(ngModel)]="myForm.message">
+  <button (click)="send()" [disabled]="!myForm.valid">Send</button>
+</form>
+
